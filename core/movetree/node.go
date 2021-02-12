@@ -41,12 +41,10 @@ type Node struct {
 
 	// Placements are stones that are used for setup, but actual moves. For
 	// example, handicap stones will be in in placements.
-	Placements []*move.Move
+	Placements move.List
 
 	// Comment is the comment for the current node.
 	Comment string
-
-	// TODO(#193): Move GameInfo property to MoveTree struct.
 
 	// GameInfo contains properties only found on the root. Should be nil on
 	// non-root nodes.
